@@ -1,0 +1,21 @@
+#%RAML 1.0
+title: Simple-API
+baseUri: /api
+description: Simple API to return random number
+mediaType:
+  - application/json
+version: 1.0.0
+protocols:
+  - HTTP
+/random/number:
+  get:
+    displayName: getRandomNumber
+    responses:
+      "200":
+        body:
+          application/json:
+            properties:
+              number:
+                example: 1
+                type: number
+                format: int
